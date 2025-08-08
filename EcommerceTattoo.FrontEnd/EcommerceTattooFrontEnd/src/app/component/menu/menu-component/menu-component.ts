@@ -14,4 +14,7 @@ export class MenuComponent {
   goToLogin() {
     this.router.navigate(['/login']);
   }
+    goToHome() {
+    this.router.navigate(['/']);
+  }
 }
