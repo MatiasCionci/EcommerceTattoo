@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcommereceTattoo.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1f05c58887f121a87e37d7c73bd9d608c599122")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb9f5cb73c5f62530d2fa75491d86aaa7fb1d709")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcommereceTattoo.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcommereceTattoo.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
