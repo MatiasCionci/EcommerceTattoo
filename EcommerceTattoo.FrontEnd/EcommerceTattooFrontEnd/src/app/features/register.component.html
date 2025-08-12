@@ -1,88 +1,68 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="./login/loginTemplate/login-form-14/css/style.css">
-
-	</head>
-	<body>
-         <div
-      class=" bg-[#141414] dark group/design-root overflow-x-hidden"
-      style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
-    >
-<app-menu-component></app-menu-component>
+        <div
+  class="bg-[#141414] dark group/design-root overflow-x-hidden"
+  style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
+>
+  <app-menu-component></app-menu-component>
 </div>
 
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-			
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-12 col-lg-10">
-					<div class="wrap d-md-flex">
-						<div class="img" style="background-image: url('images/imgRegistrar.jpg');">
-
-			      </div>
-
-						<div class="login-wrap p-4 p-md-5">
-			      	<div class="d-flex">
-			      		<div class="w-100">
-			      			<h3 class="mb-4">Register</h3>
-			      		</div>
-								<div class="w-100">
-									<p class="social-media d-flex justify-content-end">
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-									</p>
-								</div>
-			      	</div>
-							<form action="#" class="signin-form">
-			      		<div class="form-group mb-3">
-			      			<label class="label" for="name">Username</label>
-			      			<input type="text" class="form-control" placeholder="Username" required>
-							<label class="label" for="name">Email</label>
-			      			<input type="email" class="form-control" placeholder="Email" required>
-			      		</div>
-		            <div class="form-group mb-3">
-		            	<label class="label" for="password">Password</label>
-		              <input type="password" class="form-control" placeholder="Password" required>
-		            </div>
-		            <div class="form-group">
-		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Register</button>
-		            </div>
-		            <div class="form-group d-md-flex">
-		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
-									</div>
-		            </div>
-		          </form>
-		          <p class="text-center">Are you a member? <a data-toggle="tab" href="#signup" routerLink="/"><span class="truncate" (click)="goToLogin()">Sign In</span></a></p>
-		        </div>
-		      </div>
-				</div>
-			</div>
-		</div>
-	</section>
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center"></div>
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10">
+        <div class="wrap d-md-flex">
+          <div class="img" style="background-image: url('images/imgRegistrar.jpg');"></div>
+          <div class="login-wrap p-4 p-md-5">
+            <div class="d-flex">
+              <div class="w-100">
+                <h3 class="mb-4">Register</h3>
+              </div>
+              <div class="w-100">
+                <p class="social-media d-flex justify-content-end">
+                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                </p>
+              </div>
+            </div>
+            <form class="signin-form" (ngSubmit)="register()">
+              <div class="form-group mb-3">
+                <label class="label" for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" required [(ngModel)]="username" name="username">
+                <label class="label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required [(ngModel)]="email" name="email">
+              </div>
+              <div class="form-group mb-3">
+                <label class="label" for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required [(ngModel)]="password" name="password">
+              </div>
+              <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+              <div *ngIf="success" class="alert alert-success">{{ success }}</div>
+              <div class="form-group">
+                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Register</button>
+              </div>
+              <div class="form-group d-md-flex">
+                <div class="w-50 text-left">
+                  <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="w-50 text-md-right">
+                  <a href="#">Forgot Password</a>
+                </div>
+              </div>
+            </form>
+            <p class="text-center">Are you a member? <a data-toggle="tab" href="#signup" routerLink="/"><span class="truncate" (click)="goToLogin()">Sign In</span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 	<script src="./login/loginTemplate/login-form-14/js/jquery.min.js"></script>
   <script src="./login/loginTemplate/login-form-14/js/popper.js"></script>
   <script src="./login/loginTemplate/login-form-14/js/bootstrap.min.js"></script>
   <script src="./login/loginTemplate/login-form-14/js/main.js"></script>
-</body>
-</html>
-	
-
 
