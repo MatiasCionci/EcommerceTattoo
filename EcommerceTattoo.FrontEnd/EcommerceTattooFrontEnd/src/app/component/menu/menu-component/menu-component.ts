@@ -17,4 +17,10 @@ export class MenuComponent {
     goToHome() {
     this.router.navigate(['/']);
   }
+  goToReservarCita() {
+    this.router.navigate(['/reservar-cita']);
+  }
+  goToImagesList() {
+    this.router.navigate(['/images']);
+  }
 }
