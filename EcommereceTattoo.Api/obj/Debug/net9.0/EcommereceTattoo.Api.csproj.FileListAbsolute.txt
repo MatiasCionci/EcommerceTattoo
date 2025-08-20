@@ -135,3 +135,4 @@ C:\Users\cionc\OneDrive\Documentos\EcommerceTattoo\EcommerceTattoo\EcommereceTat
 C:\Users\cionc\OneDrive\Documentos\EcommerceTattoo\EcommerceTattoo\EcommereceTattoo.Api\bin\Debug\net9.0\CloudinaryDotNet.dll
 C:\Users\cionc\OneDrive\Documentos\EcommerceTattoo\EcommerceTattoo\EcommereceTattoo.Api\bin\Debug\net9.0\dotenv.net.dll
 C:\Users\cionc\OneDrive\Documentos\EcommerceTattoo\EcommerceTattoo\EcommereceTattoo.Api\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\cionc\OneDrive\Documentos\EcommerceTattoo\EcommerceTattoo\EcommereceTattoo.Api\bin\Debug\net9.0\appsettings.smtp.json

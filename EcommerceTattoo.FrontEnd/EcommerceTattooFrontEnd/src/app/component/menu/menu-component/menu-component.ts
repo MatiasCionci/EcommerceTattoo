@@ -23,4 +23,11 @@ export class MenuComponent {
   goToImagesList() {
     this.router.navigate(['/images']);
   }
+  goToVideos() {
+    this.router.navigate(['/videos-explicativos']);
+  }
+  goToMentoriaPlanes() {
+    this.router.navigate(['/mentoria-planes']);
+  }
+
 }

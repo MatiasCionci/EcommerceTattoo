@@ -1,0 +1,27 @@
+/* Snackbar flotante */
+.snackbar {
+	position: fixed;
+	left: 50%;
+	bottom: 40px;
+	transform: translateX(-50%);
+	min-width: 220px;
+	max-width: 90vw;
+	background: #222;
+	color: #fff;
+	padding: 16px 32px;
+	border-radius: 8px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+	font-size: 1.1rem;
+	z-index: 9999;
+	opacity: 0.97;
+	transition: opacity 0.3s;
+	text-align: center;
+}
+.snackbar.success {
+	background: #22c55e;
+	color: #fff;
+}
+.snackbar.error {
+	background: #ef4444;
+	color: #fff;
+}

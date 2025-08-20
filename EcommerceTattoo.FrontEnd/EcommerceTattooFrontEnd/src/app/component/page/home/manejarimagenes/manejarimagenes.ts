@@ -23,11 +23,22 @@ export class Manejarimagenes implements OnInit {
       if (event instanceof NavigationEnd) {
         this.loadImages();
       }
+     
     });
   }
 
   ngOnInit() {
     this.loadImages();
+  }
+
+  // Ejemplo de proceso asíncrono (puedes reemplazarlo por el real)
+  miProcesoAsync(): Promise<void> {
+    return new Promise(resolve => {
+      // Simula un proceso que tarda 1 segundo
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    });
   }
 
   openModal(index: number) {

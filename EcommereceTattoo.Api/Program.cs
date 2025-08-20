@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 var builder = WebApplication.CreateBuilder(args);
+// Cargar configuración SMTP adicional
+builder.Configuration.AddJsonFile("appsettings.smtp.json", optional: true, reloadOnChange: true);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TattooDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"));
