@@ -1,11 +1,20 @@
- <div class="relative flex size-full min-h-screen flex-col bg-[#111111] dark group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col bg-[#111111] dark group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
 
-<button (click)="loadImages()" style="margin-bottom:15px;">Cargar galería</button>
 
-<div *ngIf="poptroxError" style="color:red; margin-bottom:10px;">{{ poptroxError }}</div>
 <app-menu-component></app-menu-component>
 
+<div class="gap-1 px-6 flex flex-1 justify-center py-5">
+  <div class="layout-content-container flex flex-col max-w-[920px] flex-1">
+	<h2 class="text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Manejar Imágenes</h2>
+	<div class="flex flex-col items-center">
+	  <p class="text-white mb-4">Cargar imágenes de trabajos</p>
+	 
+	  <button (click)="loadImages()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+		Cargar tatuajes
+	  </button>
+	  <br />
+	</div>
 <!-- Galería -->
 <div id="wrapper">
 	<div id="main">
@@ -13,10 +22,11 @@
 			<a href="#" class="image" (click)="openModal(i); $event.preventDefault();">
 				<img [src]="img.thumbUrl || img.url" [alt]="img.title || img.publicId || ''" />
 			</a>
-			
+        
 		</article>
 	</div>
 </div>
+
 
 <!-- Modal personalizado -->
 <div class="custom-modal" *ngIf="modalOpen">

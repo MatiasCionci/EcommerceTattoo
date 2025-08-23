@@ -25,6 +25,7 @@
                 <p class="text-[#9d9db8] text-sm font-normal leading-normal">
                   Explora una amplia biblioteca de videos que cubren varios aspectos del tatuaje, desde técnicas fundamentales hasta procesos avanzados.
                 </p>
+                <div *ngIf="isLoggedIn" class="text-green-400 text-sm font-bold mt-2">Tu email: {{ userEmail }}</div>
               </div>
             </div>
             <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Técnicas</h2>
@@ -58,6 +59,9 @@
                   <div>
                     <p class="text-white text-base font-medium leading-normal">Empaquetado de Color</p>
                     <p class="text-[#9d9db8] text-sm font-normal leading-normal">Descubre los secretos para aplicar colores vibrantes y duraderos.</p>
+                    <button *ngIf="isLoggedIn" (click)="accederVideo('color')" class="text-white bg-blue-600 hover:bg-blue-800 rounded-full p-2 mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l1.41 1.41L7.83 11H20v2H7.83l5.58 5.59L12 20l-8-8z"/></svg>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -93,6 +97,9 @@
                   <div>
                     <p class="text-white text-base font-medium leading-normal">Preparación de Agujas</p>
                     <p class="text-[#9d9db8] text-sm font-normal leading-normal">Comprende las técnicas adecuadas para preparar tus agujas.</p>
+                    <button *ngIf="isLoggedIn" (click)="accederVideo('agujas')" class="text-white bg-blue-600 hover:bg-blue-800 rounded-full p-2 mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l1.41 1.41L7.83 11H20v2H7.83l5.58 5.59L12 20l-8-8z"/></svg>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -128,6 +135,9 @@
                   <div>
                     <p class="text-white text-base font-medium leading-normal">Limpieza y Cuidado Posterior</p>
                     <p class="text-[#9d9db8] text-sm font-normal leading-normal">Aprende las mejores prácticas para limpiar y proporcionar instrucciones de cuidado posterior.</p>
+                    <button *ngIf="isLoggedIn" (click)="accederVideo('cuidado')" class="text-white bg-blue-600 hover:bg-blue-800 rounded-full p-2 mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l1.41 1.41L7.83 11H20v2H7.83l5.58 5.59L12 20l-8-8z"/></svg>
+                    </button>
                   </div>
                 </div>
               </div>

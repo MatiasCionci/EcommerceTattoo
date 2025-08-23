@@ -8,5 +8,12 @@ import { MenuComponent } from '../../../menu/menu-component/menu-component';
   styleUrl: './videosexplicativos.css'
 })
 export class Videosexplicativos {
+  isLoggedIn = true; // Cambia esto por tu lógica real de login
+  userEmail = 'usuario@email.com'; // Reemplaza por tu lógica real
 
+  accederVideo(tipo: string) {
+    // Aquí va la lógica para mostrar el video o redirigir
+    console.log('Acceso a video:', tipo);
+    // Ejemplo: abrir modal, navegar, etc.
+  }
 }

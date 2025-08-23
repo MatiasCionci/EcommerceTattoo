@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSignalR();
 // Cargar configuración SMTP adicional
 builder.Configuration.AddJsonFile("appsettings.smtp.json", optional: true, reloadOnChange: true);
 builder.Services.AddControllers();
@@ -59,6 +60,7 @@ app.UseCors("AllowAngular");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapHub<EcommereceTattoo.Api.Hubs.NotificationHub>("/notificationHub");
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

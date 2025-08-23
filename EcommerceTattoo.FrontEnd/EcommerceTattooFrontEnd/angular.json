@@ -25,16 +25,8 @@
               "src/assets/login/loginTemplate/login-form-14/css/style.css",
               "src/assets/manejadorimagenes/css/main.css",
               "src/assets/manejadorimagenes/css/noscript.css"
-
             ],
-            "scripts": [
-              "src/assets/manejadorimagenes/js/jquery.min.js",
-              "src/assets/manejadorimagenes/js/jquery.poptrox.min.js",
-              "src/assets/manejadorimagenes/js/browser.min.js",
-              "src/assets/manejadorimagenes/js/breakpoints.min.js",
-              "src/assets/manejadorimagenes/js/util.js",
-              "src/assets/manejadorimagenes/js/main.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

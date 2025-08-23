@@ -54,6 +54,14 @@
               "target": "Package",
               "version": "[1.27.6, )"
             },
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            },
+            "MercadoPago": {
+              "target": "Package",
+              "version": "[1.0.4477.31589, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -61,6 +69,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.5, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -86,9 +98,21 @@
               "target": "Package",
               "version": "[8.0.7, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
             "dotenv.net": {
               "target": "Package",
               "version": "[4.0.0, )"
+            },
+            "mercadopago-sdk": {
+              "target": "Package",
+              "version": "[2.8.0, )"
             }
           },
           "imports": [

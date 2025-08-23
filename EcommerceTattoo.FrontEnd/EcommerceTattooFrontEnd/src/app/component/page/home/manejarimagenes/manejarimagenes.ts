@@ -1,4 +1,5 @@
 import { AfterViewInit,Component, OnInit } from '@angular/core';
+import { SignalRService } from '../../../../core/signalr/signalr.service';
 declare var $: any;
 import { Router, NavigationEnd } from '@angular/router';
 import { ImagesService } from '../../../../core/images/images.service';
@@ -18,12 +19,18 @@ export class Manejarimagenes implements OnInit {
   modalOpen: boolean = false;
   selectedIndex: number = 0;
 
-  constructor(private imagesService: ImagesService, private router: Router) {
+  constructor(private imagesService: ImagesService, private router: Router, private signalRService: SignalRService) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.loadImages();
       }
-     
+    });
+    // Iniciar conexión SignalR y escuchar mensajes
+    this.signalRService.startConnection();
+    this.signalRService.onMessage((msg) => {
+      // Aquí puedes manejar el mensaje recibido, por ejemplo recargar imágenes
+      console.log('Mensaje SignalR recibido:', msg);
+      this.loadImages();
     });
   }
 
